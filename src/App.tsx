@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { randomizeDeterrent } from "./utils/randomizeDeterrent";
 import { deterrents } from "./utils/deterrents";
+import { Header } from "./components/header/Header";
 
 function App() {
   const [toDont, setToDont] = React.useState("");
@@ -29,13 +30,9 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>To Don't List</h1>
-        <h2>Pro-procrastination nation</h2>
-      </header>
+      <Header />
       <main>
         <div className="inputDiv">
-          <label htmlFor="input">What do you have to do?</label>
           <div className="inputAndButton">
             <input id="input" onChange={(ev) => setToDont(ev.target.value)} />
             <button
@@ -55,7 +52,17 @@ function App() {
           </li>
         </ul>
       </main>
-      <footer>By Ro Flo</footer>
+      <footer>
+        <span>By Ro Flo</span>
+        <span>
+          <a
+            href="https://www.flaticon.com/free-icons/sleep"
+            title="sleep icons"
+          >
+            Sleep icons created by Sumitsaengtong - Flaticon
+          </a>
+        </span>
+      </footer>
     </>
   );
 }

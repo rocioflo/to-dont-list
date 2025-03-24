@@ -1,9 +1,12 @@
+#root {
+  font-family: Roboto;
+}
+
 .inputDiv {
   display: flex;
   flex-direction: column;
   width: fit-content;
   gap: 1rem;
-  border: #3e517a 2px dotted;
   padding: 1rem;
 }
 
@@ -35,30 +38,34 @@
   animation-name: begone;
 }
 
-#root {
-  display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
-  font-family: sans-serif;
-}
-
 body {
   margin: 0;
 }
 
 main {
-  padding: 5rem;
-}
-
-header {
-  background-color: #3e517a;
-  color: #f1f4f8;
-  padding: 1rem;
+  background-color: #d0c4df;
+  margin: 2rem 4rem;
+  border-radius: 3%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .inputAndButton {
   display: flex;
   gap: 1rem;
-  padding-left: 5rem;
+}
+
+input {
+  border: none;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 2%;
+  box-shadow: 3px 3px 1px black;
+}
+
+li {
+  list-style-type: none;
 }
 
 footer {
