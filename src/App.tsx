@@ -35,16 +35,25 @@ function App() {
         <form>
           <div className="inputDiv">
             <div className="inputAndButton">
-              <input id="input" onChange={(ev) => setToDont(ev.target.value)} />
+              <input
+                id="input"
+                onChange={(ev) => setToDont(ev.target.value)}
+                value={toDont}
+              />
               <button
                 className="submitButton"
                 type="submit"
                 onClick={(ev) => {
                   ev.preventDefault();
                   setListItem(toDont);
-                  // if input empty set happy face
+
                   if (toDont) {
                     setDeterrent(randomizeDeterrent(deterrents));
+                    setToDont("");
+                  }
+
+                  if (toDont === "Watch Paddington 2, the best movie ever") {
+                    setDeterrent("YES, GO DO THAT IMMEDIATELY");
                   }
                 }}
               >
