@@ -37,11 +37,15 @@ function App() {
             <div className="inputAndButton">
               <input id="input" onChange={(ev) => setToDont(ev.target.value)} />
               <button
+                className="submitButton"
                 type="submit"
                 onClick={(ev) => {
                   ev.preventDefault();
                   setListItem(toDont);
-                  setDeterrent(randomizeDeterrent(deterrents));
+                  // if input empty set happy face
+                  if (toDont) {
+                    setDeterrent(randomizeDeterrent(deterrents));
+                  }
                 }}
               >
                 Submit
@@ -52,12 +56,12 @@ function App() {
         <ul>
           <li>
             <p id="list">{listItem}</p>
-            <span>{deterrent}</span>
+            <span className="deterrent">{deterrent}</span>
           </li>
         </ul>
       </main>
       <footer>
-        <span>By Ro Flo</span>
+        <span>By Ro Flo :)</span>
         <span>
           <a
             href="https://www.flaticon.com/free-icons/sleep"

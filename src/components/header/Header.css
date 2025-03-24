@@ -20,10 +20,10 @@ h1 {
   filter: invert(100%) sepia(79%) saturate(287%) hue-rotate(180deg)
     brightness(93%) contrast(88%);
   transform: rotate(25deg);
-  height: 2.5rem;
+  height: 2.1rem;
   position: absolute;
   left: 11rem;
-  top: -0.5rem;
+  top: -0.1rem;
 }
 
 h2 {
