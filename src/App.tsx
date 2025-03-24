@@ -32,19 +32,23 @@ function App() {
     <>
       <Header />
       <main>
-        <div className="inputDiv">
-          <div className="inputAndButton">
-            <input id="input" onChange={(ev) => setToDont(ev.target.value)} />
-            <button
-              onClick={() => {
-                setListItem(toDont);
-                setDeterrent(randomizeDeterrent(deterrents));
-              }}
-            >
-              Submit
-            </button>
+        <form>
+          <div className="inputDiv">
+            <div className="inputAndButton">
+              <input id="input" onChange={(ev) => setToDont(ev.target.value)} />
+              <button
+                type="submit"
+                onClick={(ev) => {
+                  ev.preventDefault();
+                  setListItem(toDont);
+                  setDeterrent(randomizeDeterrent(deterrents));
+                }}
+              >
+                Submit
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
         <ul>
           <li>
             <p id="list">{listItem}</p>
