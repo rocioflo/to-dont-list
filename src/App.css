@@ -53,10 +53,11 @@ main {
   background-color: #d0c4df;
   margin: 2rem 4rem;
   border-radius: 3%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   max-width: fit-content;
+  box-shadow: 5px 5px 5px gainsboro;
 }
 
 .inputAndButton {
@@ -99,4 +100,9 @@ footer {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+
+  & a {
+    font-size: x-small;
+    color: black;
+  }
 }
